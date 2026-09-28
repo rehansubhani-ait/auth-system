@@ -49,10 +49,10 @@ export default function SignupForm({ onSignupSuccess, onSwitchToLogin }) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(formData)
-
     })
-
-    console.log(response);
+    let body = await response.json()
+    alert(body.message)
+    // console.log(body);
 
   };
 

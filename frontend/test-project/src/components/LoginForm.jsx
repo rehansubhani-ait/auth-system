@@ -4,7 +4,7 @@ export default function LoginForm({ onLoginSuccess, onSwitchToSignup, onForgotPa
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    rememberMe: false,
+    // rememberMe: false,
   });
 
   const [showPassword, setShowPassword] = useState(false);
@@ -36,7 +36,7 @@ export default function LoginForm({ onLoginSuccess, onSwitchToSignup, onForgotPa
       onLoginSuccess({
         email: formData.email,
         name: formData.email.split('@')[0],
-        rememberMe: formData.rememberMe,
+        // rememberMe: formData.rememberMe,
       });
     }, 900);
 
@@ -59,7 +59,7 @@ export default function LoginForm({ onLoginSuccess, onSwitchToSignup, onForgotPa
     setFormData({
       email: 'alex.morgan@sphere.io',
       password: 'SuperSecret123!',
-      rememberMe: true,
+      // rememberMe: true,
     });
     setErrors({});
   };
@@ -168,7 +168,7 @@ export default function LoginForm({ onLoginSuccess, onSwitchToSignup, onForgotPa
       </div>
 
       {/* Remember Me Checkbox */}
-      <div className="form-row-checkbox">
+      {/*   <div className="form-row-checkbox">
         <label className="custom-checkbox-container">
           <input
             type="checkbox"
